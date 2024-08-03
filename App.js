@@ -18,8 +18,6 @@ export default function App() {
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   });
 
-  
-
   function pickedNumberHandler(pickedNumber) {
     setUserNumber(pickedNumber);
     setGameIsOver(false);
@@ -42,11 +40,7 @@ export default function App() {
   }
 
   if (gameIsOver && userNumber) {
-    screen =  <GameOverScreen
-    userNumber={userNumber}
-    roundsNumber={guessRounds}
-    onStartNewGame={startNewGameHandler}
-  />
+    screen = <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={startNewGameHandler} />;
   }
 
   return (
@@ -64,7 +58,8 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? '18%' : 0,
+    // paddingTop: Platform.OS === 'android' ? "18%" : 0,
+    alignItems: 'center',
   },
   rootScreen: {
     flex: 1,

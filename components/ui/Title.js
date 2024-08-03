@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "white",
     padding: 12,
-    fontFamily: "open-sans-bold"
+    fontFamily: "open-sans-bold",
+    maxWidth: "80%",
+    width: 300,
+    marginHorizontal: "auto"
   },
 });
